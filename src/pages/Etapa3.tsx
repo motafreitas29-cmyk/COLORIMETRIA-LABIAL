@@ -88,6 +88,11 @@ export default function Etapa3() {
           <p className="text-[#d0c8b8] text-sm">Veja tudo que você recebe agora 👇</p>
         </div>
 
+        {/* Video */}
+        <div className="mb-8 rounded-2xl overflow-hidden border border-[#C4424A]/30 shadow-[0_0_30px_rgba(196,66,74,0.15)] max-w-xs mx-auto">
+          <lite-vsl id="cmplz6gcy000lljrd34g94xq1" base="https://hostplayvideos.vercel.app" aspect="9/16"></lite-vsl>
+        </div>
+
         {/* Conteúdo */}
         <div className="bg-[#1a080d] border-2 border-[#C4424A]/50 rounded-2xl p-6 mb-8">
           <h2 className="text-white font-black text-center text-lg mb-4">O que está incluído no guia:</h2>
