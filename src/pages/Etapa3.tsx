@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Shield, ChevronDown, ChevronUp, CheckCircle2, Star, Clock } from 'lucide-react';
 
-const PAYMENT_LINK = "https://";
+const PAYMENT_LINK = "https://pay.wiapy.com/in8bxSroBz";
 
 function playDing() {
   const ctx = new (window.AudioContext || (window as any).webkitAudioContext)();
