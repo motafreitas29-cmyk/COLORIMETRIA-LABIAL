@@ -41,10 +41,10 @@ function FAQItem({ q, a }: { q: string; a: string }) {
   return (
     <div className="border border-[#C4424A]/20 rounded-xl overflow-hidden">
       <button onClick={() => setOpen(!open)} className="w-full flex items-center justify-between p-4 text-left hover:bg-[#C4424A]/5 transition-colors">
-        <span className="text-white font-semibold text-sm sm:text-base pr-4">{q}</span>
+        <span className="text-white font-semibold text-base sm:text-lg pr-4">{q}</span>
         {open ? <ChevronUp className="text-[#E8A87C] w-5 h-5 flex-shrink-0" /> : <ChevronDown className="text-[#E8A87C] w-5 h-5 flex-shrink-0" />}
       </button>
-      {open && <div className="px-4 pb-4 text-[#d0c8b8] text-sm leading-relaxed border-t border-[#C4424A]/10 pt-3">{a}</div>}
+      {open && <div className="px-4 pb-4 text-[#d0c8b8] text-base leading-relaxed border-t border-[#C4424A]/10 pt-3">{a}</div>}
     </div>
   );
 }
@@ -63,8 +63,8 @@ function Countdown() {
   }, []);
   return (
     <div className="flex items-center justify-center gap-2 bg-red-900/30 border border-red-500/40 rounded-xl px-4 py-3 mb-6">
-      <Clock className="w-4 h-4 text-red-400 flex-shrink-0" />
-      <span className="text-red-300 text-sm font-bold">
+      <Clock className="w-5 h-5 text-red-400 flex-shrink-0" />
+      <span className="text-red-300 text-base font-bold">
         Oferta expira em: <span className="text-white font-black tabular-nums">{String(time.m).padStart(2, '0')}:{String(time.s).padStart(2, '0')}</span>
       </span>
     </div>
@@ -78,14 +78,14 @@ export default function Etapa3() {
 
         {/* Header */}
         <div className="text-center mb-8">
-          <span className="inline-block bg-red-500/20 border border-red-500/40 text-red-400 text-xs font-bold px-4 py-1 rounded-full mb-4 tracking-widest animate-pulse">
+          <span className="inline-block bg-red-500/20 border border-red-500/40 text-red-400 text-sm font-bold px-4 py-1 rounded-full mb-4 tracking-widest animate-pulse">
             💋 ÚLTIMA ETAPA — OFERTA ESPECIAL
           </span>
-          <h1 className="text-2xl sm:text-3xl font-black leading-tight mb-3">
+          <h1 className="text-3xl sm:text-4xl font-black leading-tight mb-3">
             Você está a <span className="text-[#E8A87C]">um passo</span> de dominar a colorimetria labial{' '}
             e nunca mais errar na escolha do pigmento.
           </h1>
-          <p className="text-[#d0c8b8] text-sm">Veja tudo que você recebe agora 👇</p>
+          <p className="text-[#d0c8b8] text-lg">Veja tudo que você recebe agora 👇</p>
         </div>
 
         {/* Video */}
@@ -95,16 +95,16 @@ export default function Etapa3() {
 
         {/* Conteúdo */}
         <div className="bg-[#1a080d] border-2 border-[#C4424A]/50 rounded-2xl p-6 mb-8">
-          <h2 className="text-white font-black text-center text-lg mb-4">O que está incluído no guia:</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
+          <h2 className="text-white font-black text-center text-xl mb-4">O que está incluído no guia:</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
             {CONTEUDO.map((item, i) => (
               <div key={i} className="flex items-center gap-3">
-                <span className="text-xl flex-shrink-0">{item.emoji}</span>
-                <span className="text-[#d0c8b8] text-sm font-medium">{item.titulo}</span>
+                <span className="text-2xl flex-shrink-0">{item.emoji}</span>
+                <span className="text-[#d0c8b8] text-base font-medium">{item.titulo}</span>
               </div>
             ))}
           </div>
-          <p className="text-center text-[#d0c8b8] text-xs border-t border-[#C4424A]/20 pt-4">
+          <p className="text-center text-[#d0c8b8] text-sm border-t border-[#C4424A]/20 pt-4">
             📄 Formato digital (PDF) · Acesso imediato · Leia no celular ou computador
           </p>
         </div>
@@ -116,16 +116,16 @@ export default function Etapa3() {
             { nome: 'Camila R.', txt: 'Parei de depender de tentativa e erro. Agora consigo explicar qual tom vamos usar e por quê.' },
           ].map((d, i) => (
             <div key={i} className="bg-[#1a080d] border border-[#C4424A]/20 rounded-xl p-4">
-              <div className="flex gap-1 mb-2">{[...Array(5)].map((_, j) => <Star key={j} className="w-3 h-3 text-[#E8A87C] fill-[#E8A87C]" />)}</div>
-              <p className="text-[#d0c8b8] text-sm italic mb-2">"{d.txt}"</p>
-              <p className="text-white font-bold text-xs">— {d.nome}</p>
+              <div className="flex gap-1 mb-2">{[...Array(5)].map((_, j) => <Star key={j} className="w-4 h-4 text-[#E8A87C] fill-[#E8A87C]" />)}</div>
+              <p className="text-[#d0c8b8] text-base italic mb-2">"{d.txt}"</p>
+              <p className="text-white font-bold text-sm">— {d.nome}</p>
             </div>
           ))}
         </div>
 
         {/* FAQ */}
         <div className="mb-8">
-          <h3 className="text-white font-black text-center text-base mb-4">Ainda tem dúvidas?</h3>
+          <h3 className="text-white font-black text-center text-xl mb-4">Ainda tem dúvidas?</h3>
           <div className="space-y-2">
             {FAQ.map((item, i) => <FAQItem key={i} q={`${i + 1}️⃣ ${item.q}`} a={item.a} />)}
           </div>
@@ -134,14 +134,14 @@ export default function Etapa3() {
         {/* Oferta */}
         <div className="bg-[#1a080d] border-2 border-[#C4424A] rounded-2xl p-8 text-center shadow-[0_0_40px_rgba(196,66,74,0.2)]">
           <Countdown />
-          <p className="text-[#d0c8b8] text-xs mb-1 uppercase tracking-widest">📄 PDF Digital · Acesso imediato · Pagamento único</p>
+          <p className="text-[#d0c8b8] text-sm mb-1 uppercase tracking-widest">📄 PDF Digital · Acesso imediato · Pagamento único</p>
           <div className="mb-1">
-            <p className="text-[#888] text-sm line-through">De R$97,00</p>
+            <p className="text-[#888] text-base line-through">De R$97,00</p>
             <p className="text-6xl font-black text-white leading-none">
               <span className="text-2xl text-[#d0c8b8]">R$</span>17<span className="text-3xl">,00</span>
             </p>
           </div>
-          <p className="text-green-400 text-xs mb-6 font-bold">⚡ 82% de desconto — só nesta página</p>
+          <p className="text-green-400 text-sm mb-6 font-bold">⚡ 82% de desconto — só nesta página</p>
 
           <a
             href={PAYMENT_LINK}
@@ -153,14 +153,14 @@ export default function Etapa3() {
             💋 GARANTIR MEU GUIA POR R$17,00
           </a>
 
-          <div className="flex items-center justify-center gap-4 text-xs text-[#888] flex-wrap">
-            <div className="flex items-center gap-1"><Shield className="w-3 h-3" /><span>7 dias de garantia</span></div>
-            <div className="flex items-center gap-1"><CheckCircle2 className="w-3 h-3 text-green-500" /><span>Acesso imediato</span></div>
-            <div className="flex items-center gap-1"><CheckCircle2 className="w-3 h-3 text-green-500" /><span>Pagamento seguro</span></div>
+          <div className="flex items-center justify-center gap-4 text-sm text-[#888] flex-wrap">
+            <div className="flex items-center gap-1"><Shield className="w-4 h-4" /><span>7 dias de garantia</span></div>
+            <div className="flex items-center gap-1"><CheckCircle2 className="w-4 h-4 text-green-500" /><span>Acesso imediato</span></div>
+            <div className="flex items-center gap-1"><CheckCircle2 className="w-4 h-4 text-green-500" /><span>Pagamento seguro</span></div>
           </div>
         </div>
 
-        <p className="text-center text-[#666] text-xs mt-6">
+        <p className="text-center text-[#888] text-sm mt-6">
           Micropigmentadoras que dominam colorimetria cobram <span className="text-[#E8A87C] font-semibold">até 50% mais</span> pelo mesmo procedimento.
         </p>
 
