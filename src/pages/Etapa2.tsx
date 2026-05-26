@@ -15,6 +15,14 @@ export default function Etapa2({ onNext }: Props) {
           </h1>
         </div>
 
+        <div className="mb-8 rounded-2xl overflow-hidden border border-[#C4424A]/30 shadow-[0_0_30px_rgba(196,66,74,0.15)]">
+          <img
+            src="https://i.postimg.cc/j5nmt787/28625a33-4ad1-4925-a965-9b13e6ee2532-(2).png"
+            alt="Colorimetria Labial"
+            className="w-full h-auto object-cover"
+          />
+        </div>
+
         <div className="bg-[#1a080d] border border-[#C4424A]/20 rounded-2xl p-6 mb-8 text-[#d0c8b8] text-sm sm:text-base leading-relaxed space-y-4">
           <p>Você aplica o procedimento com técnica impecável…</p>
           <p>Mas na hora de escolher o pigmento, <strong className="text-white">fica no achismo — e o resultado pode surpreender (pra mal).</strong></p>
